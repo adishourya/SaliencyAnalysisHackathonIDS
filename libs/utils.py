@@ -1,4 +1,5 @@
 # from typing import HTML
+from asyncio import SafeChildWatcher
 from IPython.display import HTML
 def run_test(fn1, fn2) -> HTML:
     import numpy as np
@@ -35,16 +36,19 @@ def run_test(fn1, fn2) -> HTML:
                   "Hk2qPo3","bRKfspn",
                   "W46GO1L","fiJxCVA",
                   "NQWTWXs","oadIW4Z",
-                  "85Pd59R"]
+                  "85Pd59R","ruufhZJ",
+                  "uRvs9C1"]
 
-    sad_pups = ["DKLBJh7"]
+    sad_pups = ["DKLBJh7","3V37Hqr","1YraHb7"]
 
     truth = fn2()
     yours = fn1()
     if yours is None:
         raise Exception("Attempt Before Moving On ?")
     if truth != yours:
-        return HTML(html_string.format(vid=sad_pups[0], msg="Try Again",text_color="#bf616a"))
+        vid_choice = np.random.choice(sad_pups)
+        vid_choice = sad_pups[-1]
+        return HTML(html_string.format(vid=vid_choice, msg="Try Again",text_color="#bf616a"))
     
 
     # double check
