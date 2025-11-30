@@ -1,0 +1,305 @@
+.
+├── assets
+│   ├── animations
+│   └── Maastricht_University_logo.svg
+├── files
+├── index.html
+├── __init__.py
+├── libs
+│   ├── datasets_and_models
+│   │   ├── animals10_dataloader.py
+│   │   ├── cats_dogs_dataloader.py
+│   │   ├── checkpoints
+│   │   │   └── conv_model.pth
+│   │   ├── conv_model.py
+│   │   ├── draw_sample.sh
+│   │   ├── __init__.py
+│   │   ├── __pycache__
+│   │   │   ├── animals10_dataloader.cpython-312.pyc
+│   │   │   ├── conv_model.cpython-312.pyc
+│   │   │   └── dataloader.cpython-312.pyc
+│   │   ├── sample_animals10
+│   │   │   ├── butterfly
+│   │   │   │   ├── e837b90e2cf6093ed1584d05fb1d4e9fe777ead218ac104497f5c97faeebb5bb_640.jpg
+│   │   │   │   ├── ea34b90b29f7053ed1584d05fb1d4e9fe777ead218ac104497f5c97faee8b1b8_640.jpg
+│   │   │   │   ├── eb31b20e2cfd033ed1584d05fb1d4e9fe777ead218ac104497f5c97faeebb5bb_640.jpg
+│   │   │   │   ├── eb3db7062ffd033ed1584d05fb1d4e9fe777ead218ac104497f5c97faee8b1b8_640.jpg
+│   │   │   │   ├── OIP-1GLDT_vfdLFEcWBzWaxt7gAAAA.jpeg
+│   │   │   │   ├── OIP-1Sd0G-6ou3Ciuxmfdm3sQAHaHa.jpeg
+│   │   │   │   ├── OIP-3u3iazweX4rxqUcW1ilP-QHaEm.jpeg
+│   │   │   │   ├── OIP-5PFwpG02YpotcjDovzoocwHaE6.jpeg
+│   │   │   │   ├── OIP-fVa6yA1i4oc4sqGRrgYXCwHaEU.jpeg
+│   │   │   │   ├── OIP-iiHDJqUvQgvSvRNGwz_MLAHaFj.jpeg
+│   │   │   │   ├── OIP-KaYXV79KK3t-dKWmB1F5HgHaC_.jpeg
+│   │   │   │   ├── OIP-NGFXrhlEArtgtYOP9ksHEAHaFj.jpeg
+│   │   │   │   ├── OIP-Pf0pZuRCltIXKUSmK5jayQHaFj.jpeg
+│   │   │   │   ├── OIP-Pk1BzmOVv2XvCQM14SG5PQHaE6.jpeg
+│   │   │   │   ├── OIP-s5K0u8M2l0xK8HFLPG7EMgHaFi.jpeg
+│   │   │   │   ├── OIP-SAexHo5gbI_VJl-T1tfrkgHaE7.jpeg
+│   │   │   │   ├── OIP-T4jeJE-cUY6CoE8uJ9wS2AHaFj.jpeg
+│   │   │   │   ├── OIP-TfY8Ps5q1TcSKeV_-i7TugHaFO.jpeg
+│   │   │   │   ├── OIP-TLpb152s1Gouy4zfb4qhEgHaEo.jpeg
+│   │   │   │   └── OIP-v-oMb6QiUPaj-IpYpMt38wHaE8.jpeg
+│   │   │   ├── cat
+│   │   │   │   ├── 1261.jpeg
+│   │   │   │   ├── 1307.jpeg
+│   │   │   │   ├── 1494.jpeg
+│   │   │   │   ├── 1502.jpeg
+│   │   │   │   ├── 1556.jpeg
+│   │   │   │   ├── 1621.jpeg
+│   │   │   │   ├── 1771.jpeg
+│   │   │   │   ├── 1784.jpeg
+│   │   │   │   ├── 206.jpeg
+│   │   │   │   ├── 348.jpeg
+│   │   │   │   ├── 360.jpeg
+│   │   │   │   ├── 368.jpeg
+│   │   │   │   ├── 397.jpeg
+│   │   │   │   ├── 419.jpeg
+│   │   │   │   ├── 440.jpeg
+│   │   │   │   ├── 625.jpeg
+│   │   │   │   ├── 675.jpeg
+│   │   │   │   ├── 956.jpeg
+│   │   │   │   ├── eb34b0062cf0063ed1584d05fb1d4e9fe777ead218ac104497f5c978a7eebdbb_640.jpg
+│   │   │   │   └── eb3db30d21f3003ed1584d05fb1d4e9fe777ead218ac104497f5c978a7ebb0bb_640.jpg
+│   │   │   ├── chicken
+│   │   │   │   ├── 1041.jpeg
+│   │   │   │   ├── 126.jpeg
+│   │   │   │   ├── 251.jpeg
+│   │   │   │   ├── 422.jpeg
+│   │   │   │   ├── 571.jpeg
+│   │   │   │   ├── OIP-42OMs1eamj9kgtHYh3IQPAAAAA.jpeg
+│   │   │   │   ├── OIP-6om1hYGHqnq3Vg3s8waZWwHaGu.jpeg
+│   │   │   │   ├── OIP-8Ss8AZETDgyhczkCYltXYQHaD4.jpeg
+│   │   │   │   ├── OIP-9e92-_qJlNI8J8gPtcm4swHaFj.jpeg
+│   │   │   │   ├── OIP-CLFdvDJheCKC8cORw7zowAHaJ4.jpeg
+│   │   │   │   ├── OIP-dP3iE5Ev_ytNmxcBergegQAAAA.jpeg
+│   │   │   │   ├── OIP-Gp3iVb6wQlshSNI8KCVgugHaIf.jpeg
+│   │   │   │   ├── OIP-iQFnI1ymR5V_MF2uTO-MswHaFk.jpeg
+│   │   │   │   ├── OIP-O1OHr-Nts4KxbboCr1-trgHaHa.jpeg
+│   │   │   │   ├── OIP-p-xBTyGIlXd8kVFCfIpHQgHaFj.jpeg
+│   │   │   │   ├── OIP-q5OwO0FfmNNPjf2h0MburwHaFj.jpeg
+│   │   │   │   ├── OIP-RrttbpaGbBa3FSlyExHtcwHaDx.jpeg
+│   │   │   │   ├── OIP-sybjvXtgP3b3qWlvQJonlwHaFF.jpeg
+│   │   │   │   ├── OIP-woJiqcyQwPwAu29AfnVk8gHaHw.jpeg
+│   │   │   │   └── OIP-zbU3mZZY0gzd95MS38q-fAHaFj.jpeg
+│   │   │   ├── cow
+│   │   │   │   ├── OIP-4ioGYNaH6joXUHrZ_F-s_gAAAA.jpeg
+│   │   │   │   ├── OIP-4Zc7xV1V9dEJrUzVSq7JvQHaIk.jpeg
+│   │   │   │   ├── OIP-5R8bQeX6EuhVQsxaGyuDhgHaFj.jpeg
+│   │   │   │   ├── OIP-6NfoHgVIJKfeyaYZh3nwSwHaFO.jpeg
+│   │   │   │   ├── OIP-Ck5DjiaPLG3cz0eUoX8gCQHaEo.jpeg
+│   │   │   │   ├── OIP-f0TI4TL2DwemDSImY-JEQgHaE6.jpeg
+│   │   │   │   ├── OIP-GRhWXhnZ_u1lX4M9lnCLwQHaFj.jpeg
+│   │   │   │   ├── OIP-hAFjRVhGoom_XYbQvqJGAAHaE7.jpeg
+│   │   │   │   ├── OIP-HqJWFyuU2ph4habfp1QX-QHaE7.jpeg
+│   │   │   │   ├── OIP-IMEtSmTwPpQ58j11NshumgHaE6.jpeg
+│   │   │   │   ├── OIP-ks0Kv8WEX0tFD_leLmgnAAAAAA.jpeg
+│   │   │   │   ├── OIP-LkgZow9cK8PteDCI2Yv1ogHaFj.jpeg
+│   │   │   │   ├── OIP-MALNGhY7UcPxJoquxLQWlQHaF7.jpeg
+│   │   │   │   ├── OIP-NkzDid8HU3FTXRQRCuSpgQHaFj.jpeg
+│   │   │   │   ├── OIP-nopyaGynaYjNqHjVELwZAgHaFv.jpeg
+│   │   │   │   ├── OIP-qSSi-QP7gifcyXriXIfZYQHaE4.jpeg
+│   │   │   │   ├── OIP-QWrJbhjYRr-J407tD2ACUgHaEL.jpeg
+│   │   │   │   ├── OIP-rVhsW5NLbDPjAKriCxoT0AHaD5.jpeg
+│   │   │   │   ├── OIP-TwC3ZXBYUigrC-cNId-eZwHaGW.jpeg
+│   │   │   │   └── OIP-u5QfAO57j_u7rh9YZUMGwwHaEK.jpeg
+│   │   │   ├── dog
+│   │   │   │   ├── OIP-2sKsdEI6aaXSSWHJS-QxIAHaJ4.jpeg
+│   │   │   │   ├── OIP-3HUgRAhJ--2kk9EJuRq05AHaFL.jpeg
+│   │   │   │   ├── OIP-49TXkdHCI0smpsnvB2Z2rwHaGw.jpeg
+│   │   │   │   ├── OIP-5OhdwZT0n14XqHpNTV8AAAHaEo.jpeg
+│   │   │   │   ├── OIP-5RGuxf0vlCJFIa2oVWxOTQAAAA.jpeg
+│   │   │   │   ├── OIP-ekH1fPJXDqNCblUODwjEOQHaFj.jpeg
+│   │   │   │   ├── OIP-_GmIl90tmXb9c72orTGKEQHaJ4.jpeg
+│   │   │   │   ├── OIP-GQY8QNtMeVz-ijatA4XkQAHaG_.jpeg
+│   │   │   │   ├── OIP--HjjWS524SecIyPDEh8GNgHaJ4.jpeg
+│   │   │   │   ├── OIP-JARFRPQT_kT32y55PdCAUAHaE8.jpeg
+│   │   │   │   ├── OIP-jC55hR8h_yba45YfCGJk9gHaHa.jpeg
+│   │   │   │   ├── OIP-LbH_d2FHBnLlpO3L0G-ogwHaFJ.jpeg
+│   │   │   │   ├── OIP-L-ygmvtQbfsac_7jLFyAagHaHh.jpeg
+│   │   │   │   ├── OIP-OszLpf1pm2plOT4SIdL8eQHaEK.jpeg
+│   │   │   │   ├── OIP-rP-TIds3P3w_BmyBu5MYKgHaFj.jpeg
+│   │   │   │   ├── OIP-rWYatv8asBcISKlduQPTlgHaE8.jpeg
+│   │   │   │   ├── OIP-tbDCls3PywwDe98GuL4qswHaFk.jpeg
+│   │   │   │   ├── OIP-TM3czNnBzNxp3yFJSZZRswHaE7.jpeg
+│   │   │   │   ├── OIP-w5jCZcWNfaTz8sM4c3xkHAHaFj.jpeg
+│   │   │   │   └── OIP-xF0nRwKL0hrAGfW0CyP23wHaJQ.jpeg
+│   │   │   ├── elephant
+│   │   │   │   ├── ea36b00e20f1013ed1584d05fb1d4e9fe777ead218ac104497f5c978a4efb4bb_640.jpg
+│   │   │   │   ├── ea36b90d2df3083ed1584d05fb1d4e9fe777ead218ac104497f5c978a4efb4bb_640.jpg
+│   │   │   │   ├── eb32b40c28f0023ed1584d05fb1d4e9fe777ead218ac104497f5c978a4eebdbd_640.jpg
+│   │   │   │   ├── OIP-_2s9bChal44D4sF0wd-pFwAAAA.jpeg
+│   │   │   │   ├── OIP-AIHBjXeB35Js9x4Sa9RW4AHaEK.jpeg
+│   │   │   │   ├── OIP-b2jQJ-NekdHHdRC2ELN1GQHaE7.jpeg
+│   │   │   │   ├── OIP-bC7QB8EGbpO9ZZWA2zsV5gHaFj.jpeg
+│   │   │   │   ├── OIP-bnJqV48i9S43uL-c3XWcyQHaEE.jpeg
+│   │   │   │   ├── OIP-fIU1-wtM0sJvoi3-c20C9QHaE8.jpeg
+│   │   │   │   ├── OIP-FrJF-hoKI5izIMyCDcMPcwHaE7.jpeg
+│   │   │   │   ├── OIP-fWSM5Y363wguu8LnbdCI0wHaE8.jpeg
+│   │   │   │   ├── OIP-I4axulCwmqzArS_Hm4ybhgHaE7.jpeg
+│   │   │   │   ├── OIP-lfbh1jMqzBjNsWtPGvv8gQHaFa.jpeg
+│   │   │   │   ├── OIP-qE_Lv17vDdSY8BG_HAZtbgHaEo.jpeg
+│   │   │   │   ├── OIP-_rEVXpNmSp6MMNJVhilRLgHaFj.jpeg
+│   │   │   │   ├── OIP-RH3LwuIcqYaJ3bK8LZaBowHaD8.jpeg
+│   │   │   │   ├── OIP-Vg1htIABRj1AZ3tU3i857AHaFQ.jpeg
+│   │   │   │   ├── OIP-ViatpK3wPwmHEX4vCFBZVAHaE8.jpeg
+│   │   │   │   ├── OIP-X9GqFpai3yaTvy-Y8rF03gHaE7.jpeg
+│   │   │   │   └── OIP-YLAWtT7J2BluyhLcvxdk5AHaEK.jpeg
+│   │   │   ├── horse
+│   │   │   │   ├── OIP-BbRFK5n-WfDwnD1_HL5QhAHaFj.jpeg
+│   │   │   │   ├── OIP-buCoLEzj0xc_ia_vIm77PgHaFb.jpeg
+│   │   │   │   ├── OIP-dAqwiSltr_B5ugNk9ETKhQHaFT.jpeg
+│   │   │   │   ├── OIP-EOH0Y6GMn4WUzloQSu-qZAHaFj.jpeg
+│   │   │   │   ├── OIP-Fwwzds8k2qsVmd0J_3GKDQHaE6.jpeg
+│   │   │   │   ├── OIP-heo9XsjVsOvKB8D1uD9M2gHaGW.jpeg
+│   │   │   │   ├── OIP-JUyzRX-gVFQe3b8PqNy5kgHaGb.jpeg
+│   │   │   │   ├── OIP-leuAFc3XS_nmvV-jyZiZDgHaE6.jpeg
+│   │   │   │   ├── OIP-mH_cYFSUpMyu9SYmEXoEfAHaGB.jpeg
+│   │   │   │   ├── OIP-MwwyHSyE__zZIfW4YNmscAHaFj.jpeg
+│   │   │   │   ├── OIP-Ofe086_oYegXA8IDXwkoTAHaFc.jpeg
+│   │   │   │   ├── OIP-on4yO75e_cKofrHw2BTxgwHaF7.jpeg
+│   │   │   │   ├── OIP-p8hsqB3Cr9yFVUoqUwXJwAHaFj.jpeg
+│   │   │   │   ├── OIP-PR66G_Ipv0sxTvwrtZIBogHaH5.jpeg
+│   │   │   │   ├── OIP-s0bCn46ISAPlvk40zjw19wHaFH.jpeg
+│   │   │   │   ├── OIP-uiS-ZryZUU4FwQrYIYEMigAAAA.jpeg
+│   │   │   │   ├── OIP-_uxyLP5VsLindcLS7zo0JAEsDh.jpeg
+│   │   │   │   ├── OIP-v3vvLDdrTPZrmCQ55EZoowHaEK.jpeg
+│   │   │   │   ├── OIP-wmGB4TGQKnAieopoFxXllwHaF1.jpeg
+│   │   │   │   └── OIP-zwvm9B5IEpwA7LRC45aUsQHaFj.jpeg
+│   │   │   ├── sheep
+│   │   │   │   ├── e833b10a2dfd073ed1584d05fb1d4e9fe777ead218ac104497f5c978a6eab2b0_640.jpg
+│   │   │   │   ├── e836b8062cf7083ed1584d05fb1d4e9fe777ead218ac104497f5c978a6eab2b0_640.jpg
+│   │   │   │   ├── eb30b80d2bf4043ed1584d05fb1d4e9fe777ead218ac104497f5c978a6e8b0b1_640.jpg
+│   │   │   │   ├── OIP-_00rBolciLYFXcWGfhK7kQHaE7.jpeg
+│   │   │   │   ├── OIP-14m0NidrjhJh9b8mSbsNUgHaFj.jpeg
+│   │   │   │   ├── OIP-2SZt2Ice7UQQXqxM2_-_qwHaEo.jpeg
+│   │   │   │   ├── OIP-aGzEkEUyJxm_jzxeLSW3JAHaEK.jpeg
+│   │   │   │   ├── OIP-baqJKWMvotfDlLnCKj2NxwHaFj.jpeg
+│   │   │   │   ├── OIP-CPXFMldqrcoHAkLw4i8MzwHaDZ.jpeg
+│   │   │   │   ├── OIP-ejzoeuWa4wh2HWkECimT0AHaF6.jpeg
+│   │   │   │   ├── OIP-H8O7U4ALr6aahPrZveJXugHaF5.jpeg
+│   │   │   │   ├── OIP-Hc_6FkdOGKz0pHQsCNV3KwHaFj.jpeg
+│   │   │   │   ├── OIP-m4UdRn-r2hc83rtyjIQHJAHaGB.jpeg
+│   │   │   │   ├── OIP-ObGlnPV8HOFCnUonD3VFgAHaD_.jpeg
+│   │   │   │   ├── OIP-od77UVNahRWRSy_eyrwibQHaE8.jpeg
+│   │   │   │   ├── OIP-s7t85nbWEXh64qNGmJfydAAAAA.jpeg
+│   │   │   │   ├── OIP-Si2ckV7jsXBkLdcC3BgWBgHaHr.jpeg
+│   │   │   │   ├── OIP-tQmF0kwe-oKolG8mPJrB3QHaGJ.jpeg
+│   │   │   │   ├── OIP-TtR2196n7jx_T0txFamXaAHaE8.jpeg
+│   │   │   │   └── OIP-Zoc9SImk5dpVEq-yACfU4AHaE7.jpeg
+│   │   │   ├── spider
+│   │   │   │   ├── e833b5092bf0013ed1584d05fb1d4e9fe777ead218ac104497f5c97ca5edb3bd_640.jpg
+│   │   │   │   ├── ea36b10f2afd053ed1584d05fb1d4e9fe777ead218ac104497f5c97ca5edb3bd_640.jpg
+│   │   │   │   ├── eb3cb3082af0073ed1584d05fb1d4e9fe777ead218ac104497f5c97ca5edb3bd_640.png
+│   │   │   │   ├── OIP-5JuemGqgC7-ImSD1FXV8WAHaFj.jpeg
+│   │   │   │   ├── OIP-5Mo2D57HaWIdLWgxnlnzTAHaJF.jpeg
+│   │   │   │   ├── OIP-7BjvkeeJ0zsPTEbKW_y57QHaLQ.jpeg
+│   │   │   │   ├── OIP-A9_EBXClbwzEx6C_zGowIAHaE7.jpeg
+│   │   │   │   ├── OIP-cSxJY3iwBmXYMUg6UAt51AHaFS.jpeg
+│   │   │   │   ├── OIP-CZ66c8i8bjATPFJQAQ6k5QHaF7.jpeg
+│   │   │   │   ├── OIP--D5FeQbUWqHIGRzsaeSkuQHaE7.jpeg
+│   │   │   │   ├── OIP-EGAVUqFTkSOSMYHDJBKfOAHaGw.jpeg
+│   │   │   │   ├── OIP-fIepTvmNkT-cmqcblbz6yQHaE_.jpeg
+│   │   │   │   ├── OIP-HBTFf3yQzyI_NmgHOB3jbQHaFw.jpeg
+│   │   │   │   ├── OIP-JS1Z-umaK-yACjonR7_oqAAAAA.jpeg
+│   │   │   │   ├── OIP-JSiO56lEMfelcQicorvqcAHaFU.jpeg
+│   │   │   │   ├── OIP-lB_XcgUtrqIdwg3jgJ1QXwHaFN.jpeg
+│   │   │   │   ├── OIP-szmk-9ImYlZLlezHdeKXeQHaKJ.jpeg
+│   │   │   │   ├── OIP-vTgVnZBFqJzWzn8uZPusFQHaFj.jpeg
+│   │   │   │   ├── OIP-vZStni-p3tm4BEcc90sKygEsEs.jpeg
+│   │   │   │   └── OIP-xFqlOIdRXLdl0gFJtyFUzwHaFj.jpeg
+│   │   │   └── squirrel
+│   │   │       ├── OIP-1Lfus_MN4kLo85GAPeKDQAHaE8.jpeg
+│   │   │       ├── OIP-2TINkS3ll-8tysV3MByFyAHaEy.jpeg
+│   │   │       ├── OIP-4m3QwWtPMk8Soh70jRyaKAHaE8.jpeg
+│   │   │       ├── OIP-6kQSiyhHF7a-2OYlgpPGhAHaFj.jpeg
+│   │   │       ├── OIP-cc50LzvV_Svt2N7eG1yWmwHaFb.jpeg
+│   │   │       ├── OIP-_dVEHaJdv_2qGvKpQOVEJwHaFj.jpeg
+│   │   │       ├── OIP-fq4f4c8nMUFl9J0J9XBNSAHaFj.jpeg
+│   │   │       ├── OIP-FV8Fj5JuWMU56i_W-X8NDgHaJ4.jpeg
+│   │   │       ├── OIP-gjdPAAbJl6pxjI6G1Kyj2wHaEK.jpeg
+│   │   │       ├── OIP-GUfvEwhohRRrDm_lN755zAHaLH.jpeg
+│   │   │       ├── OIP-KBqSOXL47dieGp2AbN10PAHaGL.jpeg
+│   │   │       ├── OIP-N4TkThCX2kNaUeOW0nEBTAHaFU.jpeg
+│   │   │       ├── OIP-NWsAybAgTgvyeivPblFrAwHaKq.jpeg
+│   │   │       ├── OIP-ptDN7t2wsVjztZefwbetOgHaFu.jpeg
+│   │   │       ├── OIP-p_xLwhYFUzseqJ0oUPxybAHaFk.jpeg
+│   │   │       ├── OIP-tAeJR_At_Y82kuxuO4tmfwHaFL.jpeg
+│   │   │       ├── OIP-vT6pcDuNzdRNiHygWuI9uwHaHa.jpeg
+│   │   │       ├── OIP-VXViH2nd5GyiT51uR1Z_hQHaE6.jpeg
+│   │   │       ├── OIP-Z3WkMp9I6ReS2K3YnutuqAHaEj.jpeg
+│   │   │       └── OIP-zEUYFDm5HzhJ7-wwQ84RZAHaE8.jpeg
+│   │   └── train_conv.py
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── sollutions.cpython-312.pyc
+│   │   └── utils.cpython-312.pyc
+│   ├── saliency_methods
+│   │   ├── gradcam.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       └── gradcam.cpython-312.pyc
+│   ├── sollutions
+│   │   ├── __init__.py
+│   │   └── sollutions.py
+│   └── utils.py
+├── Scratch.ipynb
+└── webslides-latest
+    ├── demos
+    │   ├── classes.html
+    │   ├── components.html
+    │   ├── gemini_bird_camera.png
+    │   ├── index.html
+    │   ├── interviews.html
+    │   ├── keynote.html
+    │   ├── landings.html
+    │   ├── longforms.html
+    │   ├── media.html
+    │   ├── my_presentation.html
+    │   ├── netflix-culture.html
+    │   ├── portfolios.html
+    │   └── why-webslides.html
+    ├── error.html
+    ├── index.html
+    ├── LICENSE
+    ├── README.md
+    └── static
+        ├── css
+        │   ├── svg-icons.css
+        │   └── webslides.css
+        ├── images
+        │   ├── android.png
+        │   ├── avatar.jpg
+        │   ├── bt-appstore.png
+        │   ├── bt-playstore.png
+        │   ├── davinci.png
+        │   ├── favicons
+        │   │   ├── favicon-120.png
+        │   │   ├── favicon-152.png
+        │   │   ├── favicon-180.png
+        │   │   ├── favicon-192.png
+        │   │   ├── favicon-32.png
+        │   │   ├── favicon-76.png
+        │   │   └── favicon.png
+        │   ├── iphone-hand.png
+        │   ├── iphone.png
+        │   ├── logos
+        │   │   ├── airbnb.svg
+        │   │   ├── apple.svg
+        │   │   ├── facebook.svg
+        │   │   ├── google.svg
+        │   │   ├── instagram.svg
+        │   │   ├── logo.svg
+        │   │   ├── microsoft.svg
+        │   │   ├── netflix.svg
+        │   │   ├── nyt.svg
+        │   │   └── thetimes.svg
+        │   ├── setup.png
+        │   ├── share-webslides.jpg
+        │   └── swipe.svg
+        └── js
+            ├── svg-icons.js
+            ├── webslides.js
+            └── webslides.min.js
+
+30 directories, 273 files
