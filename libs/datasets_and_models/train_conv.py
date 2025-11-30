@@ -9,8 +9,18 @@ import torch.nn as nn
 import torch.optim as optim
 from tqdm import tqdm
 
+import os
 from comet_ml import start , ExperimentConfig
 from comet_ml.integration.pytorch import log_model,watch
+
+
+def _save_checkpoint(model):
+    print("Saving")
+    model_checkpoint = {
+            ""
+            'model_state_dict': model.state_dict(),
+            }
+    return model_checkpoint
 
 
 
@@ -49,11 +59,12 @@ if __name__ == "__main__":
     )
     experiment = start(
       api_key=os.getenv("comet_api"),
-      project_name="SimpleConv",
+      project_name="SaliencyIDS",
       workspace="adishourya",
       experiment_config= experiment_config
     )
-    experiment.add_tag("ConvSaliency")
+    experiment_tag = "ConvSaliency"
+    experiment.add_tag(experiment_tag)
     # this is costly
 
     
@@ -114,6 +125,9 @@ if __name__ == "__main__":
         experiment.log_metric("ValidLoss",value=val_tot_loss,step=epoch)
         experiment.log_metric("ValidAccuracy",accuracy,step=epoch)
 
+
+    checkpoint = _save_checkpoint(model)
+    log_model(experiment,checkpoint,model_name=experiment_tag)
     torch.save(model,"checkpoints/conv_model.pth")
 
 
