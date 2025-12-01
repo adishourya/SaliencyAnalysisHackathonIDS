@@ -110,7 +110,7 @@ def _get_imgpicker_dropdown():
 
     return widgets.Dropdown(
         options=available_images,
-        value=available_images[0],
+        value= "libs/datasets_and_models/sample_animals10/cat/360.jpeg", # cat
         description='choose_image',
         disabled=False,
     )
