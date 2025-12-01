@@ -105,12 +105,13 @@ def _get_imgpicker_dropdown():
     for root, dirs, files in os.walk("libs/datasets_and_models/sample_animals10/"):
         for fname in files:
             available_images.append(os.path.join(root, fname))
-    random.shuffle(available_images)
+    # random.shuffle(available_images)
 
 
     return widgets.Dropdown(
         options=available_images,
-        value= "libs/datasets_and_models/sample_animals10/cat/360.jpeg", # cat
+        value= available_images[0],
+        # value= "libs/datasets_and_models/sample_animals10/cat/360.jpeg", # cat
         description='choose_image',
         disabled=False,
     )
