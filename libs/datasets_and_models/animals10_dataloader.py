@@ -1,4 +1,3 @@
-
 import torch
 from torch.utils.data import DataLoader, random_split, Subset
 from torchvision import datasets, transforms
@@ -6,7 +5,7 @@ import os
 
 # --- Configuration ---
 # Assuming the root directory is one level above the class folders
-DATA_DIR = "/home/adi/code/animals10" 
+# DATA_DIR = "/home/adi/code/animals10" 
 IMAGE_SIZE = 128
 BATCH_SIZE = 32
 TRAIN_RATIO = 0.8  # 80% for training
