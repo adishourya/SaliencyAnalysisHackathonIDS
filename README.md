@@ -3,7 +3,7 @@
 # Using the notebooks
 
 ## Notebook 1
-![Open In Colab: Notebook1](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1_GRADCAM.ipynb)
+[![Open In Colab: Notebook1](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1_GRADCAM.ipynb)
 
 
 <!-- ithub.com/adishourya/SaliencyAnalysisHackathonIDS -->
