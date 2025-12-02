@@ -5,8 +5,9 @@ import os
 
 # --- Configuration ---
 # Assuming the root directory is one level above the class folders
-# DATA_DIR = "/home/adi/code/animals10" 
-IMAGE_SIZE = 128
+DATA_DIR = "/home/adi/code/animals10" 
+# IMAGE_SIZE = 128 # for resnet
+IMAGE_SIZE = 224 # for vit
 BATCH_SIZE = 32
 TRAIN_RATIO = 0.8  # 80% for training
 SEED = 42 # For reproducible split
