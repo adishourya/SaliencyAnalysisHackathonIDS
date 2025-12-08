@@ -1,8 +1,12 @@
 # from typing import HTML
 # only supposed to be used from the notebook
+# 
+import numpy as np
+import time
 import os
 import einops
 import torch
+import torchvision
 from torchvision.io import decode_image
 import plotly
 import plotly.express as px
@@ -16,9 +20,21 @@ from IPython.display import display
 
 random.seed(10)
 
+def load_img(path:str):
+    img = decode_image(path,mode="RGB")
+    # resize the image depending on the input size of the model
+    img = einops.rearrange(img,"c h w -> 1 c h w")
+    img = torch.nn.functional.interpolate(img,size=(128,128))
+    img = img/255.0
+    return img
+
+    
+    
 def run_test(fn1, fn2) -> HTML:
-    import numpy as np
-    import time
+    '''
+        umm should i instead take arguments as 2 partials
+        and then return bool ?
+    '''
     np.random.seed(int(time.time()))
 
     from IPython.display import HTML
@@ -59,9 +75,10 @@ def run_test(fn1, fn2) -> HTML:
     truth = fn2()
     yours = fn1()
     if yours is None:
+        vid_choice = np.random.choice(sad_pups)
+        return HTML(html_string.format(vid=vid_choice, msg="Try Again",text_color="#bf616a"))
         raise Exception("Attempt Before Moving On ?")
     if truth != yours:
-        vid_choice = np.random.choice(sad_pups)
         vid_choice = sad_pups[-1]
         return HTML(html_string.format(vid=vid_choice, msg="Try Again",text_color="#bf616a"))
     
@@ -98,7 +115,7 @@ class bidict(dict):
 
 
 
-def _get_imgpicker_dropdown():
+def _get_imgpicker_dropdown(choice:int=9):
     """
     """
     available_images = []
@@ -110,7 +127,7 @@ def _get_imgpicker_dropdown():
 
     return widgets.Dropdown(
         options=available_images,
-        value= available_images[0],
+        value= available_images[choice],
         # value= "libs/datasets_and_models/sample_animals10/cat/360.jpeg", # cat
         description='choose_image',
         disabled=False,
@@ -134,6 +151,8 @@ CLASS_MAPPING = bidict(
 
 
 def plot_picked_img(img):
+    if len(img.shape) ==4:
+        img =einops.rearrange(img,"1 c h w -> c h w")
     img = einops.rearrange(img,"c h w -> h w c")
     fig1 = px.imshow(img,title="Picked Image")
     
@@ -144,7 +163,11 @@ def plot_picked_img(img):
     
 
 def plot_maps(img,sal,title:str,mode_idx:int):
+    if len(sal.shape) == 2:
+        sal = sal[None,:,:]
     map_idx = sal[mode_idx,:,:]
+
+    # map_idx = torchvision.transforms.functional.gaussian_blur(map_idx,31)
     fig = px.imshow(einops.rearrange(img,"c h w -> h w c"),title=title)
 
     fig.add_trace(

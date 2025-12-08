@@ -2,9 +2,8 @@ import os
 import torch
 import torch.nn as nn
 import torchvision.models as models # NEW: Import for pre-trained models
-from tqdm import tqdm
-from libs.datasets_and_models.animals10_dataloader import val_dataset
 from torch.utils.data import Dataset, DataLoader
+from tqdm import tqdm
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CHECKPOINT_PATH= os.path.join(
@@ -12,12 +11,18 @@ CHECKPOINT_PATH= os.path.join(
     "../datasets_and_models/checkpoints/ResNet50_Transfer_state_dict.pth"
 )
 
-val_dataloader = DataLoader(
-    val_dataset, 
-    batch_size=32, 
-    shuffle=False, # Do not shuffle validation data (or test data)
-    num_workers=0
-)
+
+
+try:
+    from libs.datasets_and_models.animals10_dataloader import val_dataset
+    val_dataloader = DataLoader(
+        val_dataset, 
+        batch_size=32, 
+        shuffle=False, # Do not shuffle validation data (or test data)
+        num_workers=0
+    )
+except FileNotFoundError:
+    pass
 
 def get_resnet():
     model = models.resnet50(weights=models.ResNet50_Weights.DEFAULT) 

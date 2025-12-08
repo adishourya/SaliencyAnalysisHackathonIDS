@@ -5,7 +5,12 @@ import os
 
 # --- Configuration ---
 # Assuming the root directory is one level above the class folders
-DATA_DIR = "/home/adi/code/animals10" 
+# my linux
+# DATA_DIR = "/home/adi/code/animals10" 
+# and on my mac
+DATA_DIR = "/Users/adi/code/animals10"
+
+
 # IMAGE_SIZE = 128 # for resnet
 IMAGE_SIZE = 224 # for vit
 BATCH_SIZE = 32
