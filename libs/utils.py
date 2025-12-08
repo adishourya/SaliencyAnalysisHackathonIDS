@@ -118,18 +118,16 @@ class bidict(dict):
 def _get_imgpicker_dropdown(choice:int=9):
     """
     """
+
     available_images = []
     for root, dirs, files in os.walk("libs/datasets_and_models/sample_animals10/"):
+        dirs.sort(key=os.path.normcase) 
+    
         for fname in files:
-            # Crucial: Ignore hidden files like .DS_Store
             if not fname.startswith('.'):
                 available_images.append(os.path.join(root, fname))
 
-    # FIX?: Sort the list using a case-insensitive key.
-    available_images.sort(key=str.lower)    
-
-    # random.shuffle(available_images)
-
+    available_images.sort(key=os.path.normcase)    
 
     return widgets.Dropdown(
         options=available_images,
