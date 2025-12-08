@@ -121,8 +121,13 @@ def _get_imgpicker_dropdown(choice:int=9):
     available_images = []
     for root, dirs, files in os.walk("libs/datasets_and_models/sample_animals10/"):
         for fname in files:
-            available_images.append(os.path.join(root, fname))
-    available_images.sort()
+            # Crucial: Ignore hidden files like .DS_Store
+            if not fname.startswith('.'):
+                available_images.append(os.path.join(root, fname))
+
+    # FIX?: Sort the list using a case-insensitive key.
+    available_images.sort(key=str.lower)    
+
     # random.shuffle(available_images)
 
 
