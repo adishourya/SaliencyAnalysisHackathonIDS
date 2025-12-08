@@ -2,11 +2,11 @@
 
 # Colab Notebooks
 
-## Notebook 1
+## Notebook 1a
 [![Open In Colab: Notebook1](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1_GRADCAM.ipynb)
 
 
-## Notebook 2
+## Notebook 1b (Optional)
 [![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1b_AffinityCAM-resnet.ipynb)
 
 

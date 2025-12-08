@@ -122,6 +122,7 @@ def _get_imgpicker_dropdown(choice:int=9):
     for root, dirs, files in os.walk("libs/datasets_and_models/sample_animals10/"):
         for fname in files:
             available_images.append(os.path.join(root, fname))
+    available_images.sort()
     # random.shuffle(available_images)
 
 
