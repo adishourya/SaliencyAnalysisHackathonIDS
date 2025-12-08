@@ -7,6 +7,6 @@
 
 
 ## Notebook 2
-[![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook2_AffinityCAM-resnet.ipynb)
+[![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1b_AffinityCAM-resnet.ipynb)
 
 
