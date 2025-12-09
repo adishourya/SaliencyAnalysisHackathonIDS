@@ -163,10 +163,11 @@ def plot_picked_img(img):
     fig1.show()
     
 
-def plot_maps(img,sal,title:str,mode_idx:int):
-    if len(sal.shape) == 2:
-        sal = sal[None,:,:]
-    map_idx = sal[mode_idx,:,:]
+def plot_maps(img,sal,title:"",mode_idx:0):
+    try:
+        map_idx = sal[mode_idx,:,:]
+    except IndexError:
+        print(sal.shape)
 
     # map_idx = torchvision.transforms.functional.gaussian_blur(map_idx,31)
     fig = px.imshow(einops.rearrange(img,"c h w -> h w c"),title=title)

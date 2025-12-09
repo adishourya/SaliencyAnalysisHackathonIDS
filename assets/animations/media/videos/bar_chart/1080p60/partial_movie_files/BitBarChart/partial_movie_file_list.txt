@@ -1,0 +1,3 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/adi/code/SaliencyAnalysisHackathonIDS/assets/animations/media/videos/bar_chart/1080p60/partial_movie_files/BitBarChart/2743010386_3944214587_58933072.mp4'
+file 'file:/Users/adi/code/SaliencyAnalysisHackathonIDS/assets/animations/media/videos/bar_chart/1080p60/partial_movie_files/BitBarChart/3790338095_4009425174_1348339979.mp4'
