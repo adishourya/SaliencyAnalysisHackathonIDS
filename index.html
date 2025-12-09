@@ -411,19 +411,13 @@
           </div>
         </section>
 
-        <section>
-        <p><strong>Saliency</strong> is the core technique used to explain a model's prediction. It highlights the parts of the input data (like specific pixels in an image) that the model considers **most important** or influential for its final decision. In simple terms, saliency answers the question: "What exactly is the model looking at?"</p>
-        <p>The **Activation ($\mathbf{A}$)** represents the degree to which a specific feature—such as a texture, edge, or component like an ear or a wheel—is **present and strong** in a particular region of the image. A high activation value indicates that the network has strongly recognized that specific pattern or feature in that spatial location.</p>
-        <p>The **Gradient ($\mathbf{\frac{\partial Y}{\partial A}}$)** measures the influence of that feature on the final prediction. It tells us how sensitive the model's confidence in the target class ($Y$) is to a small change in the activation ($A$). A high positive gradient means boosting that feature would significantly **increase** the prediction score, while a high negative gradient means it would significantly **decrease** it.</p>
-        <p>The **Positive Product (Grad-CAM Affinity)**, where the Activation and Gradient have the same sign ($\mathbf{A} \cdot \frac{\partial Y}{\partial A} > 0$), indicates a strong positive correlation. This means the feature is present, and its presence strongly **supports and confirms** the final prediction. These are the areas that are highlighted in the final Grad-CAM heatmap.</p>        </section>
-
-        
         <section class="bg-light">
           <div class="wrap">
             <div class="card-50">
                 <div class="content-left"> <img src="./assets/notebook_optional.svg" width="400"> </div>
                 <div class="content-right">
-                <h4> 1.hello <br> 2. 
+                <h2> Saliency Limitations of Deep Conv Models </h2>
+                <h4> Excessive pooling collapses saliency to a blob.
                 </h4>
                 </div>
             </div>
@@ -435,7 +429,10 @@
             <div class="card-50">
                 <div class="content-left"> <img src="./assets/notebook2.svg" width="400"> </div>
                 <div class="content-right">
-                <h4> 1.hello <br> 2. 
+                <h2> VIT </h2>
+                <h4>1.Importance of CLS tokens (unmasked) <br>
+                2. Raw Attention <br>
+                3. Attention Rollout
                 </h4>
                 </div>
             </div>
@@ -448,12 +445,20 @@
             <div class="card-50">
                 <div class="content-left"> <img src="./assets/notebook3.svg" width="400"> </div>
                 <div class="content-right">
-                <h4> 1.hello <br> 2. 
-                </h4>
+                <h2> Saliency Tool in Vision Language Models </h2>
                 </div>
             </div>
           </div>
         </section>
+
+        
+        <section class="fullscreen bg-white aligncenter">
+         <div class="embed">
+        <h1 style="aligncenter"> End of Presentation </h1>
+          </div><!-- .embed -->
+        </section>
+
+        
 
       </article>
     </main>

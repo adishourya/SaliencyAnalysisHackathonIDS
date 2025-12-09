@@ -7,6 +7,11 @@
 
 
 ## Notebook 1b (Optional)
-[![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1b_AffinityCAM-resnet.ipynb)
+[![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook1b_RESNET.ipynb)
 
 
+## Notebook 2 (VIT)
+[![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook2_VIT.ipynb)
+
+## Notebook 3 (VLM)
+[![Open In Colab: Notebook2](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adishourya/SaliencyAnalysisHackathonIDS/blob/main/Notebook3_VLM.ipynb)
